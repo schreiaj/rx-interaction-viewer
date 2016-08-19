@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
   render() {
-		const myArray = [0, 1, 2, 3, 4, 5, 6];
-    return (
-      <div>
-        {myArray.map((el,i) => <div key={i}>{el}</div>)}
-      </div>
-    );
+  	const humorousCities = [
+  		{id: 1, name:'Accident'},
+  		{id: 2, name:'Batman'},
+  		{id: 3, name:'Beaverlick'},
+  		{id: 4, name:'Flippin'},
+  		{id: 5, name:'Dog Patch'},
+  		{id: 6, name:'Embarass'}
+  	];
+  	return (
+  		<div>
+  			{humorousCities.map((city) => <div key={city.id}>{city.name}</div>)}
+  		</div>
+  	);
   }
 }
